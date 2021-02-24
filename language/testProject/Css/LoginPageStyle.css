@@ -1,0 +1,73 @@
+body {
+	margin: 0;
+    padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.avtar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -27%;
+    margin-left: 31.5%;
+}
+
+.loginplz h2 {
+	margin: 0;
+	padding: 0 0 20px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+
+.loginplz {
+	position: absolute;
+	top: 53%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 350px;
+	padding: 80px 40px;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.loginplz input {
+	margin-bottom: 20px;
+}
+
+.loginplz input[type=email], .loginplz input[type=password] {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.loginplz input[type=submit] {
+	margin-left: 90px;
+	width: 50%;
+	height: 40px;
+	color: #fff;
+	font-size: 18px;
+	background: green;
+	cursor: pointer;
+	border-radius: 25px;
+	border: none;
+	outline: none;
+    margin-top:5%;
+}
+
+.loginplz p {
+	margin: 0;
+	padding: 0;
+    font-weight: bold;
+    margin-top: 8%;
+    color: #fff;
+    font-family: sans-serif;
+}
