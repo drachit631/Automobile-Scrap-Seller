@@ -7,7 +7,7 @@ session_start();
 	$c=mysqli_query($con,"select prod_stock from products where prod_id='$prod_id'");
 	$re=mysqli_fetch_assoc($c);
 	$re1=$re['prod_stock'];
-	if($qty>$re1){
+	
 	$c=mysqli_query($con,"update products set prod_stock='$qty' where prod_id='$prod_id'");
 	
 	if($c)
@@ -19,10 +19,8 @@ session_start();
 		mysqli_error($con);
 	}
 	}
-		else
-		{
-		echo "Invalid";}
-}
+		
+
 else
 {
 	header('location:homepage.php');

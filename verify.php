@@ -5,9 +5,9 @@ include('config.php');
 if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
     // Verify data
     $email = mysqli_escape_string($con,$_GET['email']); 
-    $hash = mysqli_escape_string($con,$_GET['hash']);
-                 
+    $hash = mysqli_escape_string($con,$_GET['hash']);               
     $search = mysqli_query($con,"SELECT email_id,hash FROM registration WHERE email_id='".$email."' AND hash='".$hash."'") or die(mysqli_error()); 
+   // echo $search;
     $match  = mysqli_num_rows($search);
                  
     if($match > 0){

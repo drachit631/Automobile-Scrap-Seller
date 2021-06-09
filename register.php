@@ -57,7 +57,7 @@ include('config.php');
 			
 	 });
 	  $(document).on('change',"#contn", function(){
-		  var phoneno = /^([6-9]{2})+([0-9]{8})$/;
+		  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 		  var contn= $('#contn').val();
 		   if(contn.match(phoneno))
         {
@@ -125,7 +125,7 @@ include('config.php');
 $(document).on('change', '#name', function() {
 	 
  var nm= $('#name').val();
-		 var namePattern = /^([A-Za-z]{2,30})$/;
+		 var namePattern = "/^[a-zA-Z]+ [a-zA-Z]+$/";
 			if( namePattern.test(nm)==true)
 			{
 				return true;
@@ -167,7 +167,6 @@ $(document).on('focus', '#postz', function() {
 	
 			success:function(response){
 				alert(response);
-				window.location.href = "homepage.php";
 			}
 			
             
@@ -193,7 +192,7 @@ $(document).on('focus', '#postz', function() {
 	body{ 
 
 
-  background-image: url('bg.jpg');
+  background-image: url('bodybg/bgimg.png');
    
 
 }
@@ -262,7 +261,7 @@ select {
 
 </head>
 
-<body style="background-image: url('bg.jpg');background-position:50%50%">
+<body style="background-image: url('bodybg/bgimg.jpg')">
 
 
 
@@ -301,7 +300,7 @@ select {
 	
 	<br>
 		<label for="contn">Contact Number:</label><br>
-		<input type="tel" name="contn" id="contn" pattern="[0-9]{10}" placeholder="Contact Number"  required/><font color="red">*</font>
+		<input type="tel" name="contn" id="contn" pattern="[0-9]{10}"placeholder="Contact Number"  required/><font color="red">*</font>
 	
 	<br>
 		<label for="addr">Address:</label><br>
